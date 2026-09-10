@@ -1,1 +1,10 @@
-<p>signup works!</p>
+<div class="w-75 m-auto my-5">
+    <h1>Register Now</h1>
+    <form [formGroup]="register" (ngSubmit)="onSubmit()">
+        <input formControlName="name" type="text" class="form-control my-3" placeholder="Enter yourName">
+        <input formControlName="email" type="email" class="form-control my-3" placeholder="Enter your Email">
+        <input formControlName="password" type="password" class="form-control my-3" placeholder="Enter your Password">
+        <input formControlName="rePassword" type="password" class="form-control my-3" placeholder="Confirm Password">
+        <app-button>Register</app-button>
+    </form>
+</div>
