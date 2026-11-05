@@ -10,8 +10,9 @@
     <input formControlName="password" type="password" class="form-control my-3" placeholder="Enter your Password">
      <alertError [formName]="register" [controlName]="'password'" label="Password" />
     <input formControlName="rePassword" type="password" class="form-control my-3" placeholder="Confirm Password">
-    <alertError [formName]="register" [controlName]="'rePassword'" />
+         <alertError [formName]="register" [controlName]="'rePassword'" label="Confirm Password" />
 
-    <app-button>Register</app-button>
+
+       <button type="submit" [disabled]="!register.valid" class="bg-main text-white btn">Register</button>
   </form>
 </div>

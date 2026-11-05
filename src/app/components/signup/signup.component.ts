@@ -27,4 +27,9 @@ passwordsMatch(group: AbstractControl) {
 onSubmit(){
   console.log(this.register.value);
 }
+sendData(){
+  if(this.register.valid){
+    console.log(this.register.value);
+  }
+}
 }
