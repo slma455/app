@@ -5,11 +5,12 @@ import { AlertErrorComponent } from '../shared/ui/alert-error/alert-error.compon
 import { AbstractControl } from '@angular/forms';
 import { signupValidator } from '../shared/validators/register.validator';
 import { passwordsMatch } from '../shared/utilities/confirm-password.utilites';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [ButtonComponent,ReactiveFormsModule,AlertErrorComponent],
+  imports: [ButtonComponent,ReactiveFormsModule,AlertErrorComponent,NgClass],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss'
 })

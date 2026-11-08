@@ -1,7 +1,11 @@
 <div class="w-75 m-auto my-5">
   <h1>Register Now</h1>
   <form [formGroup]="register" (ngSubmit)="onSubmit()">
-    <input formControlName="name" type="text" class="form-control my-3" placeholder="Enter your Name">
+    <input [ngClass] ="{
+  'is-invalid': register.get('name')?.errors &&(register.get('name')?.touched || register.get('name')?.dirty),
+  'is-valid': !register.get('name')?.errors &&(register.get('name')?.touched || register.get('name')?.dirty)
+    }"
+     formControlName="name"  type="text" class="form-control my-3 " placeholder="Enter your Name">
     <alertError [formName]="register" [controlName]="'name'" />
 
     <input formControlName="email" type="email" class="form-control my-3" placeholder="Enter your Email">
